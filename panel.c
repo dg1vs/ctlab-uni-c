@@ -766,7 +766,7 @@ void Panel_MainFunction(void)
 
     // read encoder position
     // current parameter is changed if necessary
-    iEncoderPos = Encode_GetAndResetEncPos();
+    iEncoderPos = Encoder_GetAndResetPosition();
     if(iEncoderPos)
     {
         // call encoder function if it is not null
