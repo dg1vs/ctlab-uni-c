@@ -1,0 +1,78 @@
+FPGA-C changelog.txt
+
+2017-07-10 .. 20xx-xx-xx Karsten Schmidt
+----------------------------------------
+
+2017-11-14
+	#025 Adressen FPGA modified
+
+2017-11-14
+	Load the small fpga-image from flash
+	Working Makefile
+
+2017-10-19
+	Params.ucFloatPrecision for float printf used on all places
+	check of PB1 as input
+
+2017-10-18
+	if else if monster replaced by switch case
+	WEN=1 --> WEN 23
+	write eep changed
+	autosave removed
+
+2017-10-15
+	Some test with the fpga stuff from cosi
+
+2017-09-29
+	fpga-demo project added
+	fpga subch 60-79 is now working --> 16 bit register adressen und R/W - 0x00/0x80
+
+2017-09-17 
+	Lot of testing and cleanup
+	scripts are running
+	bit-files
+	
+2017-09-07
+	LOG_XXX eingefügt --> debug.h
+
+2017-09-05
+	Added Python Teststuff 
+	First test: 2:i? --> i=1..255
+
+2017-09-03
+	Solved the PCA9555 Problem....  
+
+2017-08-07
+	adaption of Interrupt according schematics to PA3
+	removed (comment out FPGA int)
+	closed #003
+
+2017-08-02
+	Panel for DAC and ADC
+
+2017-07-30
+	ADC, DAC and I2C again working
+	i2c scanner added
+	serial extension board doesn't work --> invalid characters
+
+2017-07-23
+	Problems, if lib for floating point as requiered an 20 MHZ
+	16 Mhz works as supossed to be--> lots ????
+	AVR Studio 7 witg gcc
+	gcc version 5.4.0 (AVR_8_bit_GNU_Toolchain_3.6.0_1734)
+
+2017-07-14
+	Download of fpga-images works  --> pwm.bit chrashes
+
+2017-07-11
+	Renaming of different files
+	Config directory
+	helper_macros.h
+
+2017-07-10 
+	RTC configured for Uni-C
+	refactoring Rtc
+	2 new directories Hardware SD_Card_Lib
+	Refactoring Encoder
+
+- project initally started, based on FPGA framework

@@ -1,0 +1,98 @@
+[o] open
+[c] closed
+[w] work in progress
+
+
+#001[c] c++ Pattern in all files
+
+#002[o] Replaces global variables with access functions
+	--> usefull?
+
+#003[c] Check Timer.* naming of interrupt and check the use case [07.08.2017]
+
+#004[c] Adapt Spi and download blinky to fpga
+
+#005[c] check configure_pin_available and get_pin_available in sd-raw_config.h
+
+#006[c] build testscript
+
+#007[o] replace PORT{X} trough some define from I/O-Config
+
+#008[c] pwm.bit crashes uni-c
+	--> removed file display from panel
+
+#009[c] unterschiedliche Debugvarianten bereinigen
+	--> new debug.h
+
+#010[c] SubCh 89 ist typischerweise Encoder Rate
+	--> in den Pascal-Sourcen aber FPGA Update Disable, stellt automatischen Datenaustausch FPGA <-> DAC/ADC/Ports ein
+	--> not used in Uni-c
+
+#011[c] double durch float ersetzen
+
+#012[c] Handlung EEPROM
+	--> Neues define eingeführt #define EEPROM_MAGIC_NUMMBER 0xaa45
+	
+#013[c] unused variables entfernen
+
+#014[o] unterschiedliche Hardware-Init, kein Überblick	
+
+#015[c] Übersicht IRQ erstellen
+	--> Excel-Liste
+
+#016[o]	Wenn keine SD vorhanden dürfen keine SD-Kommandos abgesetzt werden
+	  Aktuell scheint es so, dass bei Aktivitäten mit der SD remove/insert Rechenleistung verbraten wird	
+
+#018[o] LDAC DAC klären
+
+#019[c]	i2c Subch 230 und höher überarbeiten...
+		welche Api wird benutzt?
+
+#020[o]	20 Mhz Variante
+
+#021[o]	channel 0 DAC geht HWmäßig nicht
+	--> direkt am pin funktioniert es, aber auf der Erweiterungsplatine --> Stecker bastelen
+
+#022[o] wie sollen i2c Adressen eingegeben werden 7/8 bit?
+
+#023[c] bedeutung von 181 und 243, geben aktuell identisches zurück
+	--> 180, 181 --> nach 210, 211  also opt 20, opt 21
+
+#024[w] massive Änderungen in ParseSetParam --> Check EE-Handling
+	WEN=1 --> WEN 23
+	write eep changed
+
+#025[c] rückbau 8 bit Adressen, keine 16 
+	FPGA HAndling FPGA = Uni-C
+
+#026[c] einheitliche Formatierungsanweisungen
+	erledigt -->
+	sprintf_P(fmt, PSTR("#%%d:%%d=%%.%df"), Params.ucFloatPrecision); // TODO DKS Variabler Wert
+
+#027[c] sicherstellen, das PB1 Input ist, auch P36 FPGA
+	Kontrolle erfolgt
+
+#028[o] PARAMS Params vs. PARAMS LastParams;
+
+#029[o] nach #026 --> refactoring
+
+#030[o] alle zusätzlichen FPGA-Funktionen entfernen
+
+#031[o] Frequenzmesser auf PB1
+
+#032[c]	Makefile
+	-->
+
+#033[o] doxygen
+
+#034[o] c++
+
+#035[o] FreeRTOS
+	
+#035[o]	WEN
+	- "WEN=1!" bleibt drin und verhält sich wie vorher.
+	- Es gibt ein weiteres Kommando z.B. "WEN=22!", in dem Du Deinen neuen Modus einschaltest.
+	- Das neue "WEN=23!" funktioniert wie von Dir vorgeschlagen, und der Modus bleibt auch aktiviert.
+
+#036[c] FPGA-Image im Flash
+	--> some avr_objcopy magic

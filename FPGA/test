@@ -1,0 +1,1 @@
+avr-objcopy --rename-section .data=.progmem.data,contents,alloc,load,readonly,data -I binary -O elf32-avr led.bit fpgabit.o
