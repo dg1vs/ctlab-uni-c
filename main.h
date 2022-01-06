@@ -25,15 +25,9 @@
 #include <avr/eeprom.h>
 #include "helper_macros.h"
 
-#define VERSSTRSHORT "UNI-C0.4"         // 8 chars max.
-#define VERSSTRLONG  "0.4 [UNIC by DKS]"
-#define VERSSTRADD   " beta4  "         // 8 chars max.
-
-//#define STRICTSYNTAX                    // requires the address and colon in front of the command; malformed/broken commands are rejected
 
 
-// #define FIX_CAPSLOCKBUG              // there are some FPGA BASIC versions with a strange behavior regarding the CAPSlock
-// #define UNUSED_SD_COMMANDS           // compile with unused SD commands
+
 
 //----------------------------------------------------------------------------
 // EEPROM addresses

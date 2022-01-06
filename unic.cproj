@@ -139,6 +139,7 @@
             <Value>../Hardware</Value>
             <Value>../SD_Card_Lib</Value>
             <Value>../FPGA</Value>
+            <Value>../Common</Value>
           </ListValues>
         </avrgcc.compiler.directories.IncludePaths>
         <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
@@ -165,6 +166,15 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Common\debug.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Common\helper.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Common\helper.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Config\Config.h">
       <SubType>compile</SubType>
     </Compile>
@@ -190,9 +200,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Config\sd_raw_config.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="debug.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="fgpa_hw.S">
@@ -255,6 +262,9 @@
     <Compile Include="Hardware\Uart.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Common\helper_macros.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="IOPins.c">
       <SubType>compile</SubType>
     </Compile>
@@ -271,15 +281,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Timer.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="helper.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="helper.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="helper_macros.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
@@ -348,6 +349,7 @@
     <Folder Include="Hardware" />
     <Folder Include="FPGA" />
     <Folder Include="SD_Card_Lib" />
+    <Folder Include="Common" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

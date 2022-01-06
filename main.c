@@ -44,6 +44,7 @@
 
 #include "main.h"
 #include "debug.h"
+#include "Config.h"
 
 #include "fat.h"
 #include "fat_config.h"
