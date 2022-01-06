@@ -28,7 +28,7 @@
 #define VERSSTRLONG  "0.4 [UNIC by DKS]"
 #define VERSSTRADD   " beta4  "         // 8 chars max.
 
-
+#define NDEBUG
 
 // **********************************************************************************************
 
